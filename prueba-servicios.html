@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estética Paoly - Servicios</title>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -46,6 +47,12 @@
       color: #7b1fa2;
       font-weight: bold;
       transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a i {
+      margin-right: 8px;
     }
 
     nav a:hover {
@@ -69,6 +76,11 @@
       text-align: center;
     }
 
+    h1 {
+      color: #880e4f;
+      margin-bottom: 30px;
+    }
+
     .servicios {
       display: flex;
       flex-wrap: wrap;
@@ -83,22 +95,23 @@
       padding: 20px;
       width: 200px;
       transition: transform 0.3s ease;
-      position: relative;
     }
 
     .card-servicio:hover {
       transform: translateY(-5px);
     }
 
-    .card-servicio h3 {
-      margin-top: 10px;
-      font-size: 20px;
-      color: #ad1457;
+    .card-servicio img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
 
-    .icono {
-      font-size: 40px;
-      color: #f06292;
+    .card-servicio h3 {
+      font-size: 20px;
+      color: #ad1457;
     }
 
     footer {
@@ -115,52 +128,52 @@
     <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
     <nav>
       <ul>
-        <li><a href="prueba.html">Inicio</a></li>
-        <li><a href="prueba-servicios.html">Servicios</a></li>
-        <li><a href="portafolio.html">Portafolio</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="prueba.html"><i class="fas fa-home"></i>Inicio</a></li>
+        <li><a href="prueba-servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
+        <li><a href="portafolio.html"><i class="fas fa-images"></i>Portafolio</a></li>
+        <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
       </ul>
     </nav>
     <a href="#" class="btn">Agenda tu cita</a>
   </header>
 
   <main>
-    <h1 style="color:#880e4f; margin-bottom: 30px;">Nuestros Servicios</h1>
+    <h1>Nuestros Servicios</h1>
     <div class="servicios">
       <div class="card-servicio">
-        <div class="icono">💇‍♀️</div>
+        <img src="img/R (2).jpg" alt="Corte Dama">
         <h3>Corte Dama</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">💇‍♂️</div>
+        <img src="img/caballero.jpg" alt="Corte Caballero">
         <h3>Corte Caballero</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">👦</div>
+        <img src="img/niño.webp" alt="Corte Niño">
         <h3>Corte Niño</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">🎨</div>
+        <img src="img/tinte.jpg" alt="Tinte">
         <h3>Tinte</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">🧖‍♀️</div>
+        <img src="img/alisado.webp" alt="Alaciado">
         <h3>Alaciado</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">👁️</div>
+        <img src="img/pestañas.jpg" alt="Pestañas">
         <h3>Pestañas</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">💆‍♀️</div>
+        <img src="img/permanente.webp" alt="Permanente">
         <h3>Permanente</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">✨</div>
+        <img src="img/mechas.jpeg" alt="Mechas">
         <h3>Mechas</h3>
       </div>
       <div class="card-servicio">
-        <div class="icono">🧵</div>
+        <img src="img/extenciones.jpg" alt="Extensiones">
         <h3>Extensiones</h3>
       </div>
     </div>

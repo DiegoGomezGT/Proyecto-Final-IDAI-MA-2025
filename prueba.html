@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Estética Paoly</title>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * {
       box-sizing: border-box;
@@ -45,6 +46,12 @@
       color: #7b1fa2;
       font-weight: bold;
       transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a i {
+      margin-right: 8px;
     }
 
     nav a:hover {
@@ -131,10 +138,10 @@
     <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
     <nav>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="prueba-servicios.html">Servicios</a></li>
-        <li><a href="#">Portafolio</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
+        <li><a href="prueba-servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
+        <li><a href="#"><i class="fas fa-images"></i>Portafolio</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Contacto</a></li>
       </ul>
     </nav>
     <a href="#" class="btn">Agenda tu cita</a>
@@ -159,13 +166,12 @@
         <p>Estilo, color y cuidado de tus manos y pies.</p>
       </div>
       <div class="card">
-        <img src="img/masaje.webp" alt="Peinados">
+        <img src="img/masaje.webp" alt="Masaje">
         <h3>Masajes relajantes</h3>
         <p>Elimina el estrés con nuestras técnicas especializadas.</p>
       </div>
     </div>
   </section>
-
 
   <footer>
     <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
