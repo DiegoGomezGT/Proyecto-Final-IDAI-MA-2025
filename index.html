@@ -1,75 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-     <title>Estetica Paoly</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estética Paoly</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Varela Round', sans-serif;
+    }
 
-     <style>
-          body{
-               background-color: lightcoral;
-          }
-          .fontvarela{
-			margin: 0;
-               padding: 0;
-               font-family: 'Varela Round', sans-serif;
-          }
-          header{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               padding: 10px 0px 10px 0px;
-               border: 1px solid darkorchid;
-               border-radius: 25px;
-               margin-bottom: 50px;
-               background-color: pink;
-               min-width: 900px;
-          }
-          li{
-               display: inline-block;
-               padding: 20px;
-               border-radius: 25px;
-               list-style: none;
-          }
-          li:hover{
-               background-color: lightpink;
-          }
-          .logo{
-               width: 200px;
-               cursor: pointer;
-          }
-          a{
-               font-size: 20px;
-               text-decoration: none;
-               text-transform: uppercase;
-               font-weight: 700;
-               color: rgb(62, 62, 62);               
-          }
-          .btn{
-               padding: 10px 25px;
-               background-color: violet;
-               color: white;
-               border-radius: 50px;
-          }
-          .btn:hover{
-               background-color: darkviolet;
-          }
+    body {
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      color: #444;
+      padding: 20px;
+    }
 
-     </style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fce4ec;
+      padding: 15px 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    header img {
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #7b1fa2;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      color: #4a148c;
+    }
+
+    .btn {
+      background-color: #ce93d8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ba68c8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      color: #880e4f;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #6a1b9a;
+    }
+
+    .section {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+      color: #ad1457;
+      font-size: 2em;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-     <header>
-            <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo" height="80px" width="80px">
-          <nav>
-               <ul class="fontvarela">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portafolio.html">Portafolio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-               </ul>
-          </nav>
-          <a href="" class="btn">Agenta tu cita</a>
-     </header>
+
+  <header>
+    <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
+        <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
+        <li><a href="portafolio.html"><i class="fas fa-images"></i>Portafolio</a></li>
+        <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="agenda.html" class="btn">Agenda tu cita</a>
+  </header>
+
+  <section class="hero">
+    <h1>Bienvenida a Estética Paoly</h1>
+    <p>Tu belleza, nuestra pasión. Relájate y renueva tu esencia.</p>
+  </section>
+
+  <section class="section">
+    <h2>Servicios destacados</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/OIP.webp" alt="Facial">
+        <h3>Faciales</h3>
+        <p>Tratamientos revitalizantes para una piel radiante.</p>
+      </div>
+      <div class="card">
+        <img src="img/manicure.webp" alt="Manicure">
+        <h3>Manicure & Pedicure</h3>
+        <p>Estilo, color y cuidado de tus manos y pies.</p>
+      </div>
+      <div class="card">
+        <img src="img/masaje.webp" alt="Masaje">
+        <h3>Masajes relajantes</h3>
+        <p>Elimina el estrés con nuestras técnicas especializadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
+  </footer>
+
 </body>
 </html>
