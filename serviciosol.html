@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estética Paoly</title>
+  <title>Estética Paoly - Servicios</title>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -15,9 +15,9 @@
     }
 
     body {
-      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
-      color: #444;
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
       padding: 20px;
+      color: #444;
     }
 
     header {
@@ -28,6 +28,7 @@
       padding: 15px 30px;
       border-radius: 20px;
       box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
     }
 
     header img {
@@ -71,61 +72,50 @@
       background-color: #ba68c8;
     }
 
-    .hero {
+    main {
       text-align: center;
-      padding: 60px 20px;
     }
 
-    .hero h1 {
-      font-size: 3em;
+    h1 {
       color: #880e4f;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      color: #6a1b9a;
-    }
-
-    .section {
-      margin: 60px 0;
-      text-align: center;
-    }
-
-    .section h2 {
       margin-bottom: 30px;
-      color: #ad1457;
-      font-size: 2em;
     }
 
-    .cards {
+    .servicios {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 25px;
     }
 
-    .card {
+    .card-servicio {
       background: white;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       padding: 20px;
-      width: 280px;
+      width: 200px;
       transition: transform 0.3s ease;
     }
 
-    .card:hover {
-      transform: scale(1.05);
+    .card-servicio:hover {
+      transform: translateY(-5px);
     }
 
-    .card img {
+    .card-servicio img {
       width: 100%;
+      height: 150px;
+      object-fit: cover;
       border-radius: 10px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+    }
+
+    .card-servicio h3 {
+      font-size: 20px;
+      color: #ad1457;
     }
 
     footer {
-      margin-top: 60px;
+      margin-top: 50px;
       text-align: center;
       color: #777;
       font-size: 0.9em;
@@ -138,40 +128,56 @@
     <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
     <nav>
       <ul>
-        <li><a href="#"><i class="fas fa-home"></i>Inicio</a></li>
-        <li><a href="prueba-servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
-        <li><a href="#"><i class="fas fa-images"></i>Portafolio</a></li>
-        <li><a href="#"><i class="fas fa-envelope"></i>Contacto</a></li>
+        <li><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
+        <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
+        <li><a href="portafolio.html"><i class="fas fa-images"></i>Portafolio</a></li>
+        <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
       </ul>
     </nav>
     <a href="agenda.html" class="btn">Agenda tu cita</a>
   </header>
 
-  <section class="hero">
-    <h1>Bienvenida a Estética Paoly</h1>
-    <p>Tu belleza, nuestra pasión. Relájate y renueva tu esencia.</p>
-  </section>
-
-  <section class="section">
-    <h2>Servicios destacados</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="img/OIP.webp" alt="Facial">
-        <h3>Faciales</h3>
-        <p>Tratamientos revitalizantes para una piel radiante.</p>
+  <main>
+    <h1>Nuestros Servicios</h1>
+    <div class="servicios">
+      <div class="card-servicio">
+        <img src="img/R (2).jpg" alt="Corte Dama">
+        <h3>Corte Dama</h3>
       </div>
-      <div class="card">
-        <img src="img/manicure.webp" alt="Manicure">
-        <h3>Manicure & Pedicure</h3>
-        <p>Estilo, color y cuidado de tus manos y pies.</p>
+      <div class="card-servicio">
+        <img src="img/caballero.jpg" alt="Corte Caballero">
+        <h3>Corte Caballero</h3>
       </div>
-      <div class="card">
-        <img src="img/masaje.webp" alt="Masaje">
-        <h3>Masajes relajantes</h3>
-        <p>Elimina el estrés con nuestras técnicas especializadas.</p>
+      <div class="card-servicio">
+        <img src="img/niño.webp" alt="Corte Niño">
+        <h3>Corte Niño</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/tinte.jpg" alt="Tinte">
+        <h3>Tinte</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/alisado.webp" alt="Alaciado">
+        <h3>Alaciado</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/pestañas.jpg" alt="Pestañas">
+        <h3>Pestañas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/permanente.webp" alt="Permanente">
+        <h3>Permanente</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/mechas.jpeg" alt="Mechas">
+        <h3>Mechas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/extenciones.jpg" alt="Extensiones">
+        <h3>Extensiones</h3>
       </div>
     </div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>

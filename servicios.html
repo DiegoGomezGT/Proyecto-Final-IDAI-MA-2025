@@ -3,110 +3,129 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Estética Paoly - Servicios</title>
      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-     <title>Estetica Paoly - Servicios</title>
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="short icon" href="img/logo.png">
      <style>
-          body{
-               background-color: lightcoral;
-          }
-          .fontvarela{
-			margin: 0;
-               padding: 0;
-               font-family: 'Varela Round', sans-serif;
-          }
-          header{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               padding: 10px 0px 10px 0px;
-               border: 1px solid darkorchid;
-               border-radius: 25px;
-               margin-bottom: 50px;
-               background-color: pink;
-               min-width: 900px;
-          }
-          li{
-               display: inline-block;
-               padding: 20px;
-               border-radius: 25px;
-               list-style: none;
-          }
-          li:hover{
-               background-color: lightpink;
-          }
-          .logo{
-               width: 200px;
-               cursor: pointer;
-          }
-          a{
-               font-size: 20px;
-               text-decoration: none;
-               text-transform: uppercase;
-               font-weight: 700;
-               color: rgb(62, 62, 62);               
-          }
-          .btn{
-               padding: 10px 25px;
-               background-color: violet;
-               color: white;
-               border-radius: 50px;
-          }
-          .btn:hover{
-               background-color: darkviolet;
-          }
-        .dos{
-            display:  inline-block;
-            background-color: #4eb5e5;
-            text-align: center;
-            width: 200px;
-            padding: 0px;}
-        .dos li{
-          margin: 5px;
-            list-style: none;
-            padding: 20px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: 20px;
-            color: #fff;
-            cursor: pointer;
-            border-radius: 0px;
-            border-top: 2px solid #fff;
-            border-bottom: 2px solid #fff;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;}
-        .dos li:hover{
-             background-color: #06678a;
-             transition: all 2s;}
+    main {
+      text-align: center;
+    }
+
+    h1 {
+      color: #880e4f;
+      margin-bottom: 30px;
+    }
+
+    .servicios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card-servicio {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .card-servicio:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-servicio img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-servicio h3 {
+      font-size: 20px;
+      color: #ad1457;
+    }
+
      </style>
 </head>
 <body>
-     <header>
-            <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo" height="80px" width="80px">
-          <nav>
-               <ul class="fontvarela">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portafolio.html">Portafolio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-               </ul>
-          </nav>
-          <a href="" class="btn">Agenta tu cita</a>
-     </header>
-     <main>
-              <div style="text-align: center;">
-               <ul class="dos">
-        <li>Corte Dama</li>
-        <li>Corte Caballero</li>
-        <li>Corte Niño</li>
-        <li>Tinte</li>
-        <li>Alaciado</li>
-        <li>Pestañas</li>
-        <li>Permanente</li>
-        <li>Mechas</li>
-        <li>Extenciones</li>
-    </ul>
+     <!-- MP -->
+     <section class="mp">
+     <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+
+        <div class="menu-bar" id="menubar">
+            <i class="fas fa-angle-right" id="btnMenuClose"></i>
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="index.html"><span class="fas fa-home"></span>Inicio</a></li>
+                    <li><a href="servicios.html"><span class="fas fa-scissors"></span>Servicios</a></li>
+                    <li><a href="portafolio.html"><span class="fas fa-images"></span>Portafolio</a></li>
+                    <li><a href="contacto.html"><span class="fas fa-envelope"></span>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="agenda">
+                <a href="agenda.html" class="btn">Agenda tu cita</a>
+            </div>
+        </div>
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
     </div>
-     </main>
+    <script src="script.js"></script>
+    </section>
+     <!-- Contenido Principal -->
+
+  <main>
+    <h1>Nuestros Servicios</h1>
+    <div class="servicios">
+      <div class="card-servicio">
+        <img src="img/servicios/s1.jpg" alt="Corte Dama">
+        <h3>Corte Dama</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s2.jpg" alt="Corte Caballero">
+        <h3>Corte Caballero</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s3.webp" alt="Corte Niño">
+        <h3>Corte Niño</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s4.jpg" alt="Tinte">
+        <h3>Tinte</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s5.webp" alt="Alaciado">
+        <h3>Alaciado</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s6.jpg" alt="Pestañas">
+        <h3>Pestañas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s7.webp" alt="Permanente">
+        <h3>Permanente</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s8.jpeg" alt="Mechas">
+        <h3>Mechas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/servicios/s9.jpg" alt="Extensiones">
+        <h3>Extensiones</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>

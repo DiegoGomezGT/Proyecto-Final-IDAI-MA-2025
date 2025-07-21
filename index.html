@@ -3,73 +3,121 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Estética Paoly</title>
      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-     <title>Estetica Paoly</title>
-
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="short icon" href="img/logo.png">
      <style>
-          body{
-               background-color: lightcoral;
-          }
-          .fontvarela{
-			margin: 0;
-               padding: 0;
-               font-family: 'Varela Round', sans-serif;
-          }
-          header{
-               display: flex;
-               justify-content: center;
-               align-items: center;
-               padding: 10px 0px 10px 0px;
-               border: 1px solid darkorchid;
-               border-radius: 25px;
-               margin-bottom: 50px;
-               background-color: pink;
-               min-width: 900px;
-          }
-          li{
-               display: inline-block;
-               padding: 20px;
-               border-radius: 25px;
-               list-style: none;
-          }
-          li:hover{
-               background-color: lightpink;
-          }
-          .logo{
-               width: 200px;
-               cursor: pointer;
-          }
-          a{
-               font-size: 20px;
-               text-decoration: none;
-               text-transform: uppercase;
-               font-weight: 700;
-               color: rgb(62, 62, 62);               
-          }
-          .btn{
-               padding: 10px 25px;
-               background-color: violet;
-               color: white;
-               border-radius: 50px;
-          }
-          .btn:hover{
-               background-color: darkviolet;
-          }
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
 
+    .hero h1 {
+      font-size: 3em;
+      color: #880e4f;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #6a1b9a;
+    }
+
+    .section {
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin-bottom: 30px;
+      color: #ad1457;
+      font-size: 2em;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
      </style>
 </head>
 <body>
-     <header>
-            <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo" height="80px" width="80px">
-          <nav>
-               <ul class="fontvarela">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="portafolio.html">Portafolio</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-               </ul>
-          </nav>
-          <a href="" class="btn">Agenta tu cita</a>
-     </header>
+     <!-- Menu Principal -->
+     <section class="mp">
+     <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+
+        <div class="menu-bar" id="menubar">
+            <i class="fas fa-angle-right" id="btnMenuClose"></i>
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="index.html"><span class="fas fa-home"></span>Inicio</a></li>
+                    <li><a href="servicios.html"><span class="fas fa-scissors"></span>Servicios</a></li>
+                    <li><a href="portafolio.html"><span class="fas fa-images"></span>Portafolio</a></li>
+                    <li><a href="contacto.html"><span class="fas fa-envelope"></span>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="agenda">
+                <a href="agenda.html" class="btn">Agenda tu cita</a>
+            </div>
+        </div>
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
+    </div>
+    <script src="script.js"></script>
+    </section>
+    <!-- Contendido Principal -->
+    <section class="hero">
+    <h1>Bienvenida a Estética Paoly</h1>
+    <p>Tu belleza, nuestra pasión. Relájate y renueva tu esencia.</p>
+    </section>
+
+    <section class="section">
+    <h2>Servicios destacados</h2>
+     <div class="cards">
+      <div class="card">
+        <img src="img/index/i1.webp" alt="Facial">
+        <h3>Faciales</h3>
+        <p>Tratamientos revitalizantes para una piel radiante.</p>
+      </div>
+      <div class="card">
+        <img src="img/index/i2.webp" alt="Manicure">
+        <h3>Manicure & Pedicure</h3>
+        <p>Estilo, color y cuidado de tus manos y pies.</p>
+      </div>
+      <div class="card">
+        <img src="img/index/i3.jpg" alt="Peinados">
+        <h3>Peinados</h3>
+        <p>Prueba un nuevo estilo con nuestros peinados destacados.</p>
+      </div>
+     </div>
+     </section>
+
+    <footer>
+          <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
