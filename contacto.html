@@ -1,70 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estética Paoly - Contacto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Varela Round', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
-      color: #444;
-      padding: 20px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #fce4ec;
-      padding: 15px 30px;
-      border-radius: 20px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-      margin-bottom: 50px;
-    }
-
-    header img {
-      height: 80px;
-      border-radius: 50%;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #7b1fa2;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #4a148c;
-    }
-
-    .btn {
-      background-color: #ce93d8;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #ba68c8;
-    }
+      <meta charset="UTF-8">
+     <title>Estética Paoly - Contacto</title>
+     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="short icon" href="img/logo.png">
+     <style>
 
     main {
       text-align: center;
@@ -117,30 +60,36 @@
       text-align: center;
     }
 
-    footer {
-      margin-top: 60px;
-      text-align: center;
-      color: #777;
-      font-size: 0.9em;
-    }
-  </style>
+     </style>
 </head>
 <body>
+     <!-- MP -->
+     <section class="mp">
+     <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
 
-  <header>
-    <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
-    <nav>
-      <ul>
-        <li><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
-        <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
-        <li><a href="portafolio.html"><i class="fas fa-images"></i>Portafolio</a></li>
-        <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
-      </ul>
-    </nav>
-    <a href="agenda.html" class="btn">Agenda tu cita</a>
-  </header>
-
-  <main>
+        <div class="menu-bar" id="menubar">
+            <i class="fas fa-angle-right" id="btnMenuClose"></i>
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="index.html"><span class="fas fa-home"></span>Inicio</a></li>
+                    <li><a href="servicios.html"><span class="fas fa-scissors"></span>Servicios</a></li>
+                    <li><a href="portafolio.html"><span class="fas fa-images"></span>Portafolio</a></li>
+                    <li><a href="contacto.html"><span class="fas fa-envelope"></span>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="agenda">
+                <a href="agenda.html" class="btn">Agenda tu cita</a>
+            </div>
+        </div>
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
+    </div>
+    <script src="script.js"></script>
+    </section>
+    <!-- Contenido Principal -->
+       <main>
     <h1>Contáctanos</h1>
 
     <div class="map-container">
@@ -158,6 +107,6 @@
   <footer>
     <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
   </footer>
-
+    
 </body>
 </html>

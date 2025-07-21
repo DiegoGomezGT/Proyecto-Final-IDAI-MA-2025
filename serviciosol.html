@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estética Paoly - Servicios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Varela Round', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      padding: 20px;
+      color: #444;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fce4ec;
+      padding: 15px 30px;
+      border-radius: 20px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+    }
+
+    header img {
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #7b1fa2;
+      font-weight: bold;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      color: #4a148c;
+    }
+
+    .btn {
+      background-color: #ce93d8;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ba68c8;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    h1 {
+      color: #880e4f;
+      margin-bottom: 30px;
+    }
+
+    .servicios {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card-servicio {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 200px;
+      transition: transform 0.3s ease;
+    }
+
+    .card-servicio:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-servicio img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .card-servicio h3 {
+      font-size: 20px;
+      color: #ad1457;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://img.freepik.com/vector-premium/diseno-logotipo-belleza-elegante_278222-6303.jpg?w=2000" alt="Logo">
+    <nav>
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i>Inicio</a></li>
+        <li><a href="servicios.html"><i class="fas fa-concierge-bell"></i>Servicios</a></li>
+        <li><a href="portafolio.html"><i class="fas fa-images"></i>Portafolio</a></li>
+        <li><a href="contacto.html"><i class="fas fa-envelope"></i>Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="agenda.html" class="btn">Agenda tu cita</a>
+  </header>
+
+  <main>
+    <h1>Nuestros Servicios</h1>
+    <div class="servicios">
+      <div class="card-servicio">
+        <img src="img/R (2).jpg" alt="Corte Dama">
+        <h3>Corte Dama</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/caballero.jpg" alt="Corte Caballero">
+        <h3>Corte Caballero</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/niño.webp" alt="Corte Niño">
+        <h3>Corte Niño</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/tinte.jpg" alt="Tinte">
+        <h3>Tinte</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/alisado.webp" alt="Alaciado">
+        <h3>Alaciado</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/pestañas.jpg" alt="Pestañas">
+        <h3>Pestañas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/permanente.webp" alt="Permanente">
+        <h3>Permanente</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/mechas.jpeg" alt="Mechas">
+        <h3>Mechas</h3>
+      </div>
+      <div class="card-servicio">
+        <img src="img/extenciones.jpg" alt="Extensiones">
+        <h3>Extensiones</h3>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
