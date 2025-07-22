@@ -16,6 +16,8 @@ body {
     background: transparent;
 }
 .btn {
+     display: flex;
+     text-align: center;
       background-color: #ce93d8;
       color: white;
       padding: 10px 20px;
@@ -23,7 +25,11 @@ body {
       text-decoration: none;
       transition: background 0.3s;
 }
+.enlaces{
+          display: flex;
+    align-items: center;
 
+}
 .btn:hover {
       background-color: #ba68c8;
 }
@@ -52,7 +58,7 @@ body {
 .menu-bar{
      display: flex;
      width: 100%;
-     justify-content: center
+     justify-content: space-around;
 }
 
 .menu-bar .enlaces ul li{
@@ -97,7 +103,7 @@ body {
      color: #4a148c;
 }
 
-@media screen and (max-width: 795px) {
+@media screen and (max-width: 765px) {
     .menu-principal{
           top: 0;
           margin-top: 0;
@@ -154,4 +160,5 @@ footer {
       text-align: center;
       color: #777;
       font-size: 0.9em;
+      margin-bottom: 20px;
     }

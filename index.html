@@ -11,7 +11,7 @@
      <style>
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 5px 20px;
     }
 
     .hero h1 {
@@ -26,7 +26,7 @@
     }
 
     .section {
-      margin: 60px 0;
+      margin: 5px 0;
       text-align: center;
     }
 
@@ -34,6 +34,27 @@
       margin-bottom: 30px;
       color: #ad1457;
       font-size: 2em;
+    }
+
+    .contenido-lateral {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .imagen-grande img {
+      width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .cards-vertical {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      max-width: 280px;
     }
 
     .cards {
@@ -95,26 +116,36 @@
     <p>Tu belleza, nuestra pasión. Relájate y renueva tu esencia.</p>
     </section>
 
-    <section class="section">
+
+  <section class="section">
     <h2>Servicios destacados</h2>
-     <div class="cards">
-      <div class="card">
-        <img src="img/index/i1.webp" alt="Facial">
-        <h3>Faciales</h3>
-        <p>Tratamientos revitalizantes para una piel radiante.</p>
+
+    <div class="contenido-lateral">
+      <!-- Imagen grande al lado -->
+      <div class="imagen-grande">
+        <img src="img/index/salon.jpg" alt="Imagen principal" />
       </div>
-      <div class="card">
-        <img src="img/index/i2.webp" alt="Manicure">
-        <h3>Manicure & Pedicure</h3>
-        <p>Estilo, color y cuidado de tus manos y pies.</p>
+
+      <!-- Tarjetas en columna -->
+      <div class="cards-vertical">
+        <div class="card">
+          <img src="img/index/i1.webp" alt="Facial" />
+          <h3>Faciales</h3>
+          <p>Tratamientos revitalizantes para una piel radiante.</p>
+        </div>
+        <div class="card">
+          <img src="img/index/i2.webp" alt="Manicure" />
+          <h3>Manicure & Pedicure</h3>
+          <p>Estilo, color y cuidado de tus manos y pies.</p>
+        </div>
+        <div class="card">
+          <img src="img/index/i3.jpg" alt="Peinados" />
+          <h3>Peinados</h3>
+          <p>Prueba un nuevo estilo con nuestros peinados destacados.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="img/index/i3.jpg" alt="Peinados">
-        <h3>Peinados</h3>
-        <p>Prueba un nuevo estilo con nuestros peinados destacados.</p>
-      </div>
-     </div>
-     </section>
+    </div>
+  </section>
 
     <footer>
           <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>

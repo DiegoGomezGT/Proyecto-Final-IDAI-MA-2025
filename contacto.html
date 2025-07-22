@@ -14,15 +14,17 @@
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: min(max(20px, 2.5vw), 50px);
       color: #880e4f;
       margin-bottom: 30px;
+      text-align: center;
     }
 
     .map-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      width: 90%;
+      margin: auto;
     }
 
     iframe {
@@ -38,28 +40,51 @@
       background-color: #fce4ec;
       padding: 30px;
       border-radius: 20px;
-      max-width: 600px;
-      margin: 0 auto;
+      margin:  auto;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       text-align: left;
+      height: 450px;
+      width: 90%;
+      max-width: 800px;
     }
 
     .contact-info p {
-      font-size: 1.1em;
+      font-size: min(max(12px, 1.2vw), 20px);
       margin: 15px 0;
       color: #6a1b9a;
-      display: flex;
       align-items: center;
       gap: 10px;
+      text-align: center;
     }
 
     .contact-info i {
       color: #ad1457;
-      font-size: 1.2em;
+      font-size: min(max(13px, 1.3vw), 20px);
       min-width: 25px;
       text-align: center;
+      margin-right: 10px;
     }
 
+    .container{
+     margin: 20px;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 30px;
+     grid-template-areas: "map-container contact-info";
+    }
+    .contact-info a {
+      display: block;
+      text-align: center;
+      
+    }
+    .contact-info span {
+      font-size: 8em;
+      margin: 15px 0;
+      color: #6a1b9a;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
      </style>
 </head>
 <body>
@@ -91,17 +116,20 @@
     <!-- Contenido Principal -->
        <main>
     <h1>Contáctanos</h1>
-
+    <div class="container">
     <div class="map-container">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.1928024854166!2d-100.39872469380494!3d25.778119503382083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x866290d91a9ab6b1%3A0x4dc620a6a0e68cd6!2sEst%C3%A9tica%20Paoly!5e0!3m2!1ses!2smx!4v1750422923295!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="contact-info">
-      <p><i class="fas fa-phone"></i><strong>Teléfono:</strong> 1234-5678</p>
-      <p><i class="fas fa-envelope"></i><strong>Email:</strong> estetica@gmail.com</p>
+      <h1>Información</h1>
+      <p><i class="fas fa-phone"></i><strong>Teléfono:</strong> 81 1485 8265</p>
+      <p><i class="fas fa-envelope"></i><strong>Email:</strong> paolygomez2022@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i><strong>Dirección:</strong> Av. De Los Astros 1217, Monterrey, Nuevo León</p>
-      <p><i class="fas fa-clock"></i><strong>Horario:</strong> Lunes a Viernes 9:00 AM - 6:00 PM</p>
+      <p><i class="fas fa-clock"></i><strong>Horario:</strong> Lunes a Viernes 11:00 AM - 8:00 PM</p>
+      <a href="https://www.facebook.com/EsteticaPaoly" target="_blank"> <span class="fab fa-facebook"></span> </a>
     </div>
+  </div>
   </main>
 
   <footer>

@@ -14,8 +14,10 @@
     }
 
     h1 {
+      font-size: min(max(20px, 2.5vw), 50px);
       color: #880e4f;
       margin-bottom: 30px;
+      text-align: center;
     }
 
     .servicios {
@@ -32,6 +34,7 @@
       padding: 20px;
       width: 200px;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .card-servicio:hover {
@@ -49,6 +52,35 @@
     .card-servicio h3 {
       font-size: 20px;
       color: #ad1457;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .modal-contenido {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .cerrar {
+      float: right;
+      font-size: 24px;
+      color: #880e4f;
+      cursor: pointer;
     }
 
      </style>
@@ -81,48 +113,101 @@
     </section>
      <!-- Contenido Principal -->
 
-  <main>
+<main>
     <h1>Nuestros Servicios</h1>
     <div class="servicios">
-      <div class="card-servicio">
-        <img src="img/servicios/s1.jpg" alt="Corte Dama">
-        <h3>Corte Dama</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s2.jpg" alt="Corte Caballero">
-        <h3>Corte Caballero</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s3.webp" alt="Corte Niño">
-        <h3>Corte Niño</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s4.jpg" alt="Tinte">
-        <h3>Tinte</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s5.webp" alt="Alaciado">
-        <h3>Alaciado</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s6.jpg" alt="Pestañas">
-        <h3>Pestañas</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s7.webp" alt="Permanente">
-        <h3>Permanente</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s8.jpeg" alt="Mechas">
-        <h3>Mechas</h3>
-      </div>
-      <div class="card-servicio">
-        <img src="img/servicios/s9.jpg" alt="Extensiones">
-        <h3>Extensiones</h3>
-      </div>
+      <div class="card-servicio"><img src="img/servicios/s1.jpg" alt="Corte Dama"><h3>Corte Dama</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s2.jpg" alt="Corte Caballero"><h3>Corte Caballero</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s3.webp" alt="Corte Niño"><h3>Corte Niño</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s4.jpg" alt="Tinte"><h3>Tinte</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s5.webp" alt="Alaciado"><h3>Alaciado</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s6.jpg" alt="Pestañas"><h3>Pestañas</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s7.webp" alt="Permanente"><h3>Permanente</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s8.jpeg" alt="Mechas"><h3>Mechas</h3></div>
+      <div class="card-servicio"><img src="img/servicios/s9.jpg" alt="Extensiones"><h3>Extensiones</h3></div>
     </div>
   </main>
 
+  <!-- Modal -->
+  <div id="modal-servicio" class="modal">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p id="modal-precio"></p>
+    </div>
+  </div>
+
+  <!-- Script para el modal -->
+  <script>
+    const serviciosData = {
+      "Corte Dama": {
+        descripcion: "Estilo personalizado y cuidado completo.",
+        precio: "$180 MXN"
+      },
+      "Corte Caballero": {
+        descripcion: "Corte moderno con detalles profesionales.",
+        precio: "$150 MXN"
+      },
+      "Corte Niño": {
+        descripcion: "Corte divertido para pequeños con estilo.",
+        precio: "$120 MXN"
+      },
+      "Tinte": {
+        descripcion: "Color duradero y técnica profesional.",
+        precio: "$400 MXN"
+      },
+      "Alaciado": {
+        descripcion: "Cabello suave, sedoso y libre de frizz.",
+        precio: "$350 MXN"
+      },
+      "Pestañas": {
+        descripcion: "Extensiones naturales y duraderas.",
+        precio: "$250 MXN"
+      },
+      "Permanente": {
+        descripcion: "Rizos definidos con larga duración.",
+        precio: "$320 MXN"
+      },
+      "Mechas": {
+        descripcion: "Iluminación personalizada para tu estilo.",
+        precio: "$450 MXN"
+      },
+      "Extensiones": {
+        descripcion: "Largo y volumen con acabado natural.",
+        precio: "$600 MXN"
+      }
+    };
+
+    const cards = document.querySelectorAll(".card-servicio");
+    const modal = document.getElementById("modal-servicio");
+    const modalTitulo = document.getElementById("modal-titulo");
+    const modalDescripcion = document.getElementById("modal-descripcion");
+    const modalPrecio = document.getElementById("modal-precio");
+    const cerrarBtn = document.querySelector(".cerrar");
+
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const titulo = card.querySelector("h3").textContent;
+        const data = serviciosData[titulo];
+
+        modalTitulo.textContent = titulo;
+        modalDescripcion.textContent = data.descripcion;
+        modalPrecio.textContent = "Precio: " + data.precio;
+        modal.style.display = "block";
+      });
+    });
+
+    cerrarBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
   <footer>
     <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
   </footer>

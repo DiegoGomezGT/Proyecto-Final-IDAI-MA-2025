@@ -8,44 +8,52 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
      <link rel="stylesheet" href="styles.css">
      <link rel="short icon" href="img/logo.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css">
      <style>
     main {
       text-align: center;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: min(max(20px, 2.5vw), 50px);
       color: #880e4f;
       margin-bottom: 30px;
+      text-align: center;
     }
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
+body { font-family: sans-serif; }
 
-    .gallery-item {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      padding: 15px;
-      width: 250px;
-      transition: transform 0.3s ease;
-    }
+.gallery {
+  background: transparent;
+  height: 70%;
+}
 
-    .gallery-item:hover {
-      transform: scale(1.05);
-    }
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
 
-    .gallery-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+.folio{
+  height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
      </style>
 </head>
 <body>
@@ -77,17 +85,40 @@
      <!-- Contenido Principal -->
   <main>
     <h1>Portafolio de Estética Paoly</h1>
-    <div class="gallery">
-      <div class="gallery-item"><img src="img/portafolio/p1.jpg" alt="Estilo 1"></div>
-      <div class="gallery-item"><img src="img/portafolio/p2.png" alt="Estilo 2"></div>
-      <div class="gallery-item"><img src="img/portafolio/p3.jpg" alt="Estilo 3"></div>
-      <div class="gallery-item"><img src="img/portafolio/p4.png" alt="Estilo 4"></div>
-    </div>
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div ><img class="folio" src="img/portafolio/1.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/2.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/3.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/4.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/5.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/6.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/7.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/8.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/9.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/10.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/11.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/12.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/13.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/14.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/15.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/16.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/17.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/18.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/19.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/20.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/21.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/22.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/23.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/24.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/25.jpg" alt=""></div>
+        <div ><img class="folio" src="img/portafolio/26.jpg" alt=""></div>
+      </div>  
   </main>
 
   <footer>
     <p>&copy; 2025 Estética Paoly. Todos los derechos reservados.</p>
   </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
 </body>
 </html>

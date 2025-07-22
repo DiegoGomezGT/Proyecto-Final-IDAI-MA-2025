@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agendar Cita - Estética Paoly</title>
   <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="styles.css">
+  <link rel="short icon" href="img/logo.png">
   <style>
     body {
       font-family: 'Varela Round', sans-serif;
       background: linear-gradient(to  right, #ffdde1, #ee9ca7);
-      padding: 20px;
       color: #444;
     }
 
@@ -62,10 +64,35 @@
   </style>
 </head>
 <body>
+     <section class="mp">
+     <div class="menu-principal">
+        <div class="logo" id="logo">
+            <img src="img/logo.png" alt="logo">
+        </div>
+
+        <div class="menu-bar" id="menubar">
+            <i class="fas fa-angle-right" id="btnMenuClose"></i>
+            <nav class="enlaces" id="enlaces">
+                <ul>
+                    <li><a href="index.html"><span class="fas fa-home"></span>Inicio</a></li>
+                    <li><a href="servicios.html"><span class="fas fa-scissors"></span>Servicios</a></li>
+                    <li><a href="portafolio.html"><span class="fas fa-images"></span>Portafolio</a></li>
+                    <li><a href="contacto.html"><span class="fas fa-envelope"></span>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="agenda">
+                <a href="agenda.html" class="btn">Agenda tu cita</a>
+            </div>
+        </div>
+        <i class="fas fa-bars" id="btnMenuOpen"></i>
+    </div>
+    <script src="script.js"></script>
+    </section>
+
 
   <div class="container">
     <h1>Agenda tu cita</h1>
-    <form>
+    <form id="formulario">
       <label for="nombre">Nombre completo:</label>
       <input type="text" id="nombre" name="nombre" required>
 
@@ -77,7 +104,6 @@
         <option value="tinte">Tinte</option>
         <option value="pestañas">Pestañas</option>
         <option value="facial">Facial</option>
-        <!-- Agrega más según tu lista -->
       </select>
 
       <label for="fecha">Fecha:</label>
@@ -87,11 +113,28 @@
       <input type="time" id="hora" name="hora" >
 
       <label for="comentarios">Comentarios adicionales:</label>
-      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+      <textarea style="resize: none;" id="comentarios" name="comentarios" rows="4" ></textarea>
 
       <button type="submit">Confirmar cita</button>
     </form>
   </div>
+<script>
+  document.getElementById('formulario').addEventListener('submit', function(e) {
+      e.preventDefault(); 
 
+      const nombre = document.getElementById('nombre').value;
+      const servicio = document.getElementById('servicio').value;
+      const fecha = document.getElementById('fecha').value;
+      const hora = document.getElementById('hora').value;
+      const comentarios = document.getElementById('comentarios').value;
+
+      const numero = '5218114858265'; 
+      const texto = `Hola, soy ${nombre}. Me gustaría agendar un servicio de ${servicio} el día ${fecha} a las ${hora}. Comentarios: ${comentarios}`;
+
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, '_blank'); // abre WhatsApp en nueva pestaña
+  });
+</script>
 </body>
 </html>
